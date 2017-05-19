@@ -4,10 +4,15 @@ class Post
 
   def initialize name
     @title = name
+    @author = nil
   end
 
   def author_name
-    self.author.name
+    if !self.author
+      return nil
+    else
+      self.author.name
+    end
   end
 
 end

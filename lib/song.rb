@@ -3,6 +3,7 @@ class Song
   attr_accessor :name, :artist
 
   def initialize name
+    @artist = nil
     @name = name
   end
 
@@ -15,7 +16,11 @@ class Song
   # end
 
   def artist_name
-    self.artist.name
+    if !self.artist
+      return nil
+    else
+      self.artist.name
+    end
   end
 
 end
